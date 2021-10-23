@@ -3,90 +3,133 @@ version: "2.0"
 nlu:
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - හායි
+    - හෙලෝ
+    - කොහොමද
+    - උදෑසනක්
+    - සුබ උදෑසනක් ඔයාට
+    - සුබ උදෑසනක්
+    - සුබ උදෑසනක් වේවා
+    - සන්ද්‍යාවක්
+    - සුබ සන්ද්‍යාවක් ඔයාට
+    - සුබ සන්ද්‍යාවක්
+    - සුබ සන්ද්‍යාවක් වේවා
+    - සුභ සන්ද්‍යාවක් ඔයාට
+    - සුභ සන්ද්‍යාවක්
+    - සුභ සන්ද්‍යාවක් වේවා
+    - සන්දයාවක්
+    - සුභ උදෑසනක් ඔයාට
+    - සුභ උදෑසනක්
+    - සුභ උදෑසනක් වේවා
+    - සුබ සන්දයාවක් ඔයාට
+    - සුබ සන්දයාවක්
+    - සුබ සන්දයාවක් වේවා
+    - සුභ සන්දයාවක් ඔයාට
+    - සුභ සන්දයාවක්
+    - සුභ සන්දයාවක් වේවා
 
 - intent: goodbye
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - ස්තූතියි ඔයාට
+    - ස්තූතියි
+    - බායි බායි
+    - බායි
+    - සුබ දවසක්
+    - සුබ දවසක් ඔයාට
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - ඔව්
+    - හා
+    - ඇත්තෙන්ම
+    - ඒක හොදයි
+    - නිවැරදියි
 
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - නෑ
+    - නැත
+    - එපා
+    - එහෙම එපා
+    - එහෙම ඕනේ නෑ
+    - අපෝ එපා
+    - අපෝ නෑ
 
-- intent: mood_great
+- intent: request_for_lands
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - ඕගොල්ලෝ ගාව තියන ඉඩම් මොනවද?
+    - දැනට තියන ඉඩම් මොනවද?
+    - විකුනන්න දාල තියන ඒවා මොනවද?
+    - ඉඩම් ව්‍යපෘති මොනාද?
+    - ඕගොල්ලෝ ගාව දැනට තියන ඉඩම් මොනවද?
+    - තියන ඉඩම් මොනවද?
+    - දැනට විකුනන්න දාල තියන ඒවා මොනවද?
+    - දැනට තියන ඉඩම් ව්‍යපෘති මොනාද?
+   
 
-- intent: mood_unhappy
+- intent: request_for_lands_with_location
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - ඕගොල්ලෝ ගාව තියන [නුවර](location) ඉඩම් මොනවද?
+    - දැනට [පිළියන්දල](location) තියන ඉඩම් මොනවද?
+    - [පිළියන්දල](location) හරියේ විකුනන්න දාල තියන ඒවා මොනවද?
+    - [කොළොඹ](location) ඉඩම් ව්‍යපෘති මොනාද?
+    - ඕගොල්ලෝ ගාව දැනට [බණ්ඩාරගම](location) පැත්තේ තියන ඉඩම් මොනවද?
+    - [හොරණ](location) තියන ඉඩම් මොනවද?
+    - දැනට [හොරණ](location) පැත්තේ විකුනන්න දාල තියන ඒවා මොනවද?
+    - [පිළියන්දල](location) දැනට තියන ඉඩම් ව්‍යපෘති මොනාද?
+        
 
-- intent: bot_challenge
+- intent: inform_location
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - [බණ්ඩාරගම](location) පැත්තේ
+    - [පිළියන්දල](location)
+    - [හොරණ](location) හරියේ
+    - [නුවර](location) ඉඩම්
+    - [නුවර](location)
+    - [අම්පාර](location)ට ආසන්නව
+    - [මාතර](location) දිස්ත්‍රික්කේ
+    - [කුරුණෑගල](location) දිස්ත්‍රික්කය
+    - [ගම්පහ](location)
+    - [කළුතර](location) ප්‍රදේශය
+    - [ඉංගිරිය](location) ප්‍රදේශයේ
+    - [හෝමාගම](location) දිහා
+    - [මහරගම](location) පැත්තට වෙන්න
+
+- intent: inform_land_type
+  examples: |
+    - [නේවාසික](type)
+    - [නේවාසික](type) ඉඩම්
+    - [නේවාසික](type) ඉඩමක්
+    - [නේවාසික](type) බිම් කෑල්ලක්
+    - [නේවාසික](type) බිම් කොටසක්
+    - [ව්‍යාපාරික](type)
+    - [ව්‍යාපාරික](type) ඉඩම්
+    - [ව්‍යාපාරික](type) ඉඩමක්
+    - [ව්‍යාපාරික](type) බිම් කෑල්ලක්
+    - [ව්‍යාපාරික](type) බිම් කොටසක්
+
+
+- intent: inform_land_size
+  examples: |
+    - [10](size)
+    - [6](size)
+    - [10](size)ක
+    - [12](size)ක විතර
+    - [6](size)ට වැඩි
+    - [15](size)ක් වගේ
+    - [10](size)ක්
+    - [20](size)ට අඩු
+    - [15](size)
+    - [24](size)
+
+
+- intent: inform_project
+  examples: |
+    - [අභිමන්](project)
+    - [හරිත උයන](project)
+    - [සිසිල් සෙවණ](project) ගැන
+    - [හයිවේ ගේට්](project) ගැන
+    - [ග්‍රීන් සිටි](project) ව්‍යාපෘතිය
+    - [හරිත උයන](project) ව්‍යාපෘතිය ගැන
+    - [සිසිල් සෙවණ](project)
+
