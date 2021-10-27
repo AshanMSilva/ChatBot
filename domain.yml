@@ -16,7 +16,7 @@ intents:
 entities:
   - location
   - project
-  - type
+  - land_type
   - size
 
 
@@ -27,12 +27,20 @@ slots:
   project:
     type: text
     influence_conversation: true
-  type:
-    type: text
+  land_type:
+    type: categorical
+    values:
+      - නේවාසික
+      - ව්‍යාපාරික
     influence_conversation: true
   size:
     type: float
     influence_conversation: true
+  projects:
+    type: list
+    influence_conversation: true
+  project_details:
+    type: any
 
 responses:
   utter_greet:
@@ -43,7 +51,7 @@ responses:
     - text: නැවත හමුවෙමු!
     - text: සුබ දවසක්!
   utter_land:
-    - text: මොන ප්‍රදේශයේ ඉඩම්ද ඔබ සොයන්නේ? 
+    - text: මොන දිස්ත්‍රික්කයේ ඉඩම්ද ඔබ සොයන්නේ? 
     - text: ඔබ මොන දිස්ත්‍රික්කයේ ඉඩම්ද සොයන්නේ? 
   utter_location:
     - text: නේවාසික ඉඩමක්ද ව්‍යාපාරික ඉඩමක්ද?

@@ -41,7 +41,7 @@ projects ={
         "no_slots":22,
         "ava_slots":17,
         "price_of_perch": 450000,
-        "location":"බණ්ඩාරගම",
+        "location":"කළුතර",
         "project":"බණ්ඩාරගම අභිමන්"        
     },
     "6":{
@@ -50,7 +50,7 @@ projects ={
         "no_slots":24,
         "ava_slots":8,
         "price_of_perch": 260000,
-        "location":"බණ්ඩාරගම",
+        "location":"කළුතර",
         "project":"බණ්ඩාරගම ග්‍රීන් සිටි"        
     },
     "7":{
@@ -59,7 +59,7 @@ projects ={
         "no_slots":16,
         "ava_slots":5,
         "price_of_perch": 70000,
-        "location":"බණ්ඩාරගම",
+        "location":"කළුතර",
         "project":"බණ්ඩාරගම හයිවේ ගේට්"        
     },
     "8":{
@@ -68,7 +68,7 @@ projects ={
         "no_slots":12,
         "ava_slots":3,
         "price_of_perch": 240000,
-        "location":"බණ්ඩාරගම",
+        "location":"කළුතර",
         "project":"හයිවේ සිටි"        
     },
     "9":{
@@ -77,7 +77,7 @@ projects ={
         "no_slots":26,
         "ava_slots":15,
         "price_of_perch": 270000,
-        "location":"පිළියන්දල",
+        "location":"කොළඹ",
         "project":"පිළියන්දල අභිමන්"        
     },
     "10":{
@@ -86,7 +86,7 @@ projects ={
         "no_slots":20,
         "ava_slots":20,
         "price_of_perch": 500000,
-        "location":"පිළියන්දල",
+        "location":"කොළඹ",
         "project":"පිළියන්දල හරිත උයන"        
     },
     "11":{
@@ -95,7 +95,7 @@ projects ={
         "no_slots":28,
         "ava_slots":22,
         "price_of_perch": 320000,
-        "location":"පිළියන්දල",
+        "location":"කොළඹ",
         "project":"පිළියන්දල ග්‍රීන් සිටි"        
     },
     "12":{
@@ -104,7 +104,7 @@ projects ={
         "no_slots":48,
         "ava_slots":42,
         "price_of_perch": 260000,
-        "location":"හොරණ",
+        "location":"කළුතර",
         "project":"හොරණ හයිවේ ගේට්"        
     },
     "13":{
@@ -113,7 +113,7 @@ projects ={
         "no_slots":18,
         "ava_slots":3,
         "price_of_perch": 290000,
-        "location":"හොරණ",
+        "location":"කළුතර",
         "project":"හොරණ සිසිල් සෙවණ"        
     },
     "14":{
@@ -122,7 +122,7 @@ projects ={
         "no_slots":16,
         "ava_slots":5,
         "price_of_perch": 460000,
-        "location":"හොරණ",
+        "location":"කළුතර",
         "project":"හොරණ අභිමන්"        
     },
     "15":{
@@ -131,7 +131,7 @@ projects ={
         "no_slots":16,
         "ava_slots":2,
         "price_of_perch": 210000,
-        "location":"හොරණ",
+        "location":"කළුතර",
         "project":"හොරණ ග්‍රීන් සිටි"        
     },
     "16":{
@@ -140,7 +140,7 @@ projects ={
         "no_slots":18,
         "ava_slots":12,
         "price_of_perch": 600000,
-        "location":"හොරණ",
+        "location":"කළුතර",
         "project":"හොරණ හරිත උයන"        
     },
     "17":{
@@ -204,7 +204,7 @@ projects ={
         "ava_slots":20,
         "price_of_perch": 240000,
         "location":"කුරුණෑගල",
-        "project":"කුරුණෑගල අභිමන්"        
+        "project":"කුරුණෑගල අභිමන්"    
     },
     
 
@@ -278,7 +278,7 @@ projects ={
         "no_slots":16,
         "ava_slots":3,
         "price_of_perch": 120000,
-        "location":"ඉංගිරිය",
+        "location":"කළුතර",
         "project":"ඉංගිරිය අභිමන්"        
     },
     "32":{
@@ -287,7 +287,7 @@ projects ={
         "no_slots":36,
         "ava_slots":20,
         "price_of_perch": 90000,
-        "location":"ඉංගිරිය",
+        "location":"කළුතර",
         "project":"ඉංගිරිය හරිත උයන"        
     },
     "33":{
@@ -296,7 +296,7 @@ projects ={
         "no_slots":16,
         "ava_slots":8,
         "price_of_perch": 220000,
-        "location":"ඉංගිරිය",
+        "location":"කළුතර",
         "project":"ඉංගිරිය හයිවේ ගේට්"        
     },
     "34":{
@@ -305,7 +305,7 @@ projects ={
         "no_slots":42,
         "ava_slots":25,
         "price_of_perch": 110000,
-        "location":"හෝමාගම",
+        "location":"කොළඹ",
         "project":"හෝමාගම අභිමන්"        
     },
     "35":{
@@ -314,7 +314,7 @@ projects ={
         "no_slots":112,
         "ava_slots":79,
         "price_of_perch": 100000,
-        "location":"හෝමාගම",
+        "location":"කොළඹ",
         "project":"හෝමාගම හයිවේ ගේට්"        
     },
     "36":{
@@ -323,7 +323,7 @@ projects ={
         "no_slots":36,
         "ava_slots":20,
         "price_of_perch": 240000,
-        "location":"මහරගම",
+        "location":"කොළඹ",
         "project":"මහරගම අභිමන්"       
     },
 }

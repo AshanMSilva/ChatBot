@@ -17,22 +17,30 @@ class ActionProjectsSearch(Action):
 
         location = tracker.get_slot("location")
         size  = tracker.get_slot("size")
-        type  = tracker.get_slot("type")
-
+        land_type  = tracker.get_slot("land_type")
+        projects_searched = []
         if not size:
             size = 0
-        if not type:
-            type = None
-        projects_searched = []
-        dispatcher.utter_message(text="{} ප්‍රදේශයේ පර්චස් {}ට වැඩි {} ඉඩම් සොයමින් පවතී.".format(location, size, type))
+        if land_type != 'නේවාසික' and land_type != 'ව්‍යාපාරික':
+            dispatcher.utter_message(text="{} ප්‍රදේශයේ පර්චස් {}ට වැඩි ඉඩම් සොයමින් පවතී.".format(location, size))
+            for i in projects:
+                project = projects[i]
+                if(project['location'] == location and project['size']>=int(size)):
+                    projects_searched.append(project['project'])
+            if(len(projects_searched) == 0):
+                dispatcher.utter_message(text="කණගාටුයි, {} ප්‍රදේශයේ පර්චස් {}ට වැඩි ඉඩම් නොමැත.".format(location, size))
+                return []
+            return [SlotSet("projects", projects_searched)]    
+        
+        dispatcher.utter_message(text="{} ප්‍රදේශයේ පර්චස් {}ට වැඩි {} ඉඩම් සොයමින් පවතී.".format(location, size, land_type))
 
         for i in projects:
             project = projects[i]
-            if(type != None):
-                if(project['location'] == location and project['size']>=size and project['type'] == type):
-                    projects_searched.append(project['project'])
+            print(project)
+            if(project['location'] == location and project['size']>=int(size) and project['type'] == land_type):
+                projects_searched.append(project['project'])
         if(len(projects_searched) == 0):
-            dispatcher.utter_message(text="කණගාටුයි, {} ප්‍රදේශයේ පර්චස් {}ට වැඩි {} ඉඩම් නොමැත.".format(location, size, type))
+            dispatcher.utter_message(text="කණගාටුයි, {} ප්‍රදේශයේ පර්චස් {}ට වැඩි {} ඉඩම් නොමැත.".format(location, size, land_type))
             return []
         return [SlotSet("projects", projects_searched)] 
 
