@@ -1,4 +1,8 @@
-version: "2.0"
+version: '2.0'
+
+session_config:
+  session_expiration_time: 180
+  carry_over_slots_to_new_session: true
 
 intents:
 - greet
@@ -11,15 +15,12 @@ intents:
 - inform_land_type
 - inform_land_size
 - inform_project
-
-
 entities:
-  - location
-  - project
-  - land_type
-  - size
-
-
+- location
+- project
+- land_type
+- size
+- inequality
 slots:
   location:
     type: text
@@ -30,9 +31,13 @@ slots:
   land_type:
     type: categorical
     values:
-      - නේවාසික
-      - ව්‍යාපාරික
-    influence_conversation: true
+    - නේවාසික
+    - ව්‍යාපාරික
+  inequality:
+    type: categorical
+    values:
+    - වැඩි
+    - අඩු
   size:
     type: float
     influence_conversation: true
@@ -42,52 +47,56 @@ slots:
   project_details:
     type: any
 
+  agent_details:
+    type: any
 responses:
   utter_greet:
     - text: ආයුබෝවන්! ඔබට අවශ්‍ය උපකාරය කුමක්ද?
-    - text: සුබ දවසක්! ඔබට අවශ්‍ය උපකාරය කුමක්ද? 
+    - text: සුබ දවසක්! ඔබට අවශ්‍ය උපකාරය කුමක්ද?
   utter_goodbye:
     - text: බායි!
     - text: නැවත හමුවෙමු!
     - text: සුබ දවසක්!
   utter_land:
-    - text: මොන දිස්ත්‍රික්කයේ ඉඩම්ද ඔබ සොයන්නේ? 
-    - text: ඔබ මොන දිස්ත්‍රික්කයේ ඉඩම්ද සොයන්නේ? 
+    - text: මොන දිස්ත්‍රික්කයේ ඉඩම්ද ඔබ සොයන්නේ?
+    - text: ඔබ මොන දිස්ත්‍රික්කයේ ඉඩම්ද සොයන්නේ?
   utter_location:
     - text: නේවාසික ඉඩමක්ද ව්‍යාපාරික ඉඩමක්ද?
   utter_type:
     - text: පර්චස් කීයක වගේ ඉඩමක්ද සොයන්නේ?
     - text: පර්චස් කීයක ඉඩමක්ද?
-  # utter_project:
-  #   - text: මෙතැනින් මොන ව්‍යාපෘතිය ගැනද දැනගන්න ඕනේ?
   utter_search_projects:
     - condition:
       - type: slot
         name: projects
         value: null
-      text: ""
+      text: කණගාටුයි.මේ මොහොතේ සුදුසු ඉඩමක් සොයා ගත නොහැක. නැවත මුල සිට සෙවීමට දිස්ත්‍රික්කයක නමක් ඇතුලත් කරන්න. 
     - text: "{projects}\n මෙතැනින් මොන ව්‍යාපෘතිය ගැනද දැනගන්න ඕනේ?"
   utter_project_details:
     - condition:
       - type: slot
         name: project_details
         value: null
-      text: "ව්‍යාපෘතියේ නම වැරදියි"
-    - text: "{project_details}"
-
-
+      text: ව්‍යාපෘතියේ නම වැරදියි. කරුණාකර නිවැරදි නමක් ඇතුළත් කරන්න.
+    - text: මේ ව්‍යාපෘතිය සම්බන්ද එජෙන්ට් පිළිබද විස්තර දැන ගන්න ඕනේද?
+  utter_agent_details:
+    - condition:
+      - type: slot
+        name: agent_details
+        value: null
+      text: කණගාටුයි. එජෙන්ට් පිළිබද විස්තර නොමැත.
+    - text: ''
 actions:
   - utter_goodbye
   - utter_greet
   - utter_location
   - utter_type
   - utter_land
-  - utter_project
   - utter_search_projects
   - utter_project_details
   - action_projects_search
   - action_project_details_search
+  - action_agent_details
+  - utter_agent_details
 
-session_config:
-  session_expiration_time: 120
-  carry_over_slots_to_new_session: true
+
