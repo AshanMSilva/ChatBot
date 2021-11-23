@@ -1,7 +1,8 @@
 version: "2.0"
 
 stories:
-- story: Search Lands with location
+
+- story: Search Lands with location affirm agent details
   steps:
   - intent: greet
   - action: utter_greet
@@ -15,12 +16,32 @@ stories:
   - intent: inform_project
   - action: action_project_details_search
   - action: utter_project_details
+  - intent: affirm
+  - action: action_agent_details
+  - action: utter_agent_details
   - intent: goodbye
+  - action: utter_goodbye
+
+- story: Search Lands with location deny agent details
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_for_lands_with_location
+  - action: utter_location
+  - intent: inform_land_type
+  - action: utter_type
+  - intent: inform_land_size
+  - action: action_projects_search
+  - action: utter_search_projects 
+  - intent: inform_project
+  - action: action_project_details_search
+  - action: utter_project_details
+  - intent: deny
   - action: utter_goodbye
 
 
 
-- story: Search Lands without location
+- story: Search Lands without location affirm agent details
   steps:
   - intent: greet
   - action: utter_greet
@@ -36,5 +57,31 @@ stories:
   - intent: inform_project
   - action: action_project_details_search
   - action: utter_project_details
+  - intent: affirm
+  - action: action_agent_details
+  - action: utter_agent_details
   - intent: goodbye
   - action: utter_goodbye
+
+
+
+- story: Search Lands without location deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_for_lands
+  - action: utter_land
+  - intent: inform_location
+  - action: utter_location
+  - intent: inform_land_type
+  - action: utter_type
+  - intent: inform_land_size
+  - action: action_projects_search
+  - action: utter_search_projects 
+  - intent: inform_project
+  - action: action_project_details_search
+  - action: utter_project_details
+  - intent: deny
+  - action: utter_goodbye
+
+  
